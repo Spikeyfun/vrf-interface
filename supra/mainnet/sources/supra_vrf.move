@@ -67,7 +67,7 @@ module supra_addr::supra_vrf {
     // Fee Collection Functions
     // ============================================================================
 
-    /// Collects VRF response transaction fees from the client’s wallet (V1).
+    /// Collects VRF response transaction fees from the clients wallet (V1).
     /// Only callable by whitelisted free-nodes.
     native public fun collect_tx_fee_from_client(
         sender: &signer,
@@ -76,7 +76,7 @@ module supra_addr::supra_vrf {
         nonce: u64
     );
 
-    /// Collects VRF response transaction fees from the client’s wallet (V2).
+    /// Collects VRF response transaction fees from the clients wallet (V2).
     /// Only callable by whitelisted free-nodes.
     native public fun collect_tx_fee_from_client_v2<T>(
         sender: &signer,
