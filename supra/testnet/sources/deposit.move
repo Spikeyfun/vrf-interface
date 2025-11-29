@@ -1,7 +1,6 @@
 module supra_addr::deposit {
 
     use std::string::String;
-    use std::vector;
 
     struct SupraVRFPermit<phantom T> has store {}
 
