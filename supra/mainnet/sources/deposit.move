@@ -6,7 +6,7 @@ module supra_addr::deposit {
     /// Capability struct for VRF module permissions
     struct SupraVRFPermit<phantom T> has store {}
 
-    /// Client's module balance information return struct
+    /// Clients module balance information return struct
     struct ClientModuleInfo has drop, copy {
         module_type_info: String,
         max_callback_txn_fee: u64,
@@ -78,7 +78,7 @@ module supra_addr::deposit {
     /// Disable a module from making VRF requests
     native public entry fun disable_module<T>(client: &signer);
 
-    /// Remove a module from client's whitelist
+    /// Remove a module from clients whitelist
     native public fun remove_module<T>(permit_cap: SupraVRFPermit<T>);
 
     /// Update maximum transaction fee for all modules of a client
@@ -133,11 +133,11 @@ module supra_addr::deposit {
     native public fun has_minimum_balance_reached_v2(client_address: address): bool;
 
     #[view]
-    /// Get client's current balance
+    /// Get clients current balance
     native public fun check_client_fund(client_address: address): u64;
 
     #[view]
-    /// Get client's remaining grant amount
+    /// Get clients remaining grant amount
     native public fun get_client_remaining_grant(client_address: address): u64;
 
     #[view]
@@ -145,19 +145,19 @@ module supra_addr::deposit {
     native public fun get_client_total_grant(client_address: address): u64;
 
     #[view]
-    /// Get supra's minimum balance limit (V2)
+    /// Get supras minimum balance limit (V2)
     native public fun check_min_balance_supra_v2(): u64;
 
     #[view]
-    /// Get client's minimum balance requirement (V2)
+    /// Get clients minimum balance requirement (V2)
     native public fun check_min_balance_client_v2(client_address: address): u64;
 
     #[view]
-    /// Get client's maximum transaction fee (V2)
+    /// Get clients maximum transaction fee (V2)
     native public fun check_max_txn_fee_client_v2(client_address: address): u64;
 
     #[view]
-    /// Get client's effective balance (balance - min_balance) for V2
+    /// Get clients effective balance (balance - min_balance) for V2
     native public fun check_effective_balance_v2(client_address: address): u64;
 
     #[view]
