@@ -26,7 +26,7 @@ module supra_addr::deposit {
     }
 
     // ============================================================================
-    // Funciones de Inicialización y Admin (Entry)
+    // View Functions (Entry)
     // ============================================================================
 
     /// Reinitialize the module to migrate (Admin)
