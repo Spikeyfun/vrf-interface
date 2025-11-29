@@ -1,7 +1,6 @@
 module supra_addr::supra_vrf {
     
     use std::string::String;
-    use std::vector;
     use supra_addr::deposit::SupraVRFPermit;
 
     // ============================================================================
